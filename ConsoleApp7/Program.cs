@@ -24,7 +24,7 @@
         {
             while (true)
             {
-                Console.WriteLine("============== REOLMARKEDET ==============");
+                Console.WriteLine(" REOLMARKED ");
                 Console.WriteLine("1) Registrer ny lejer");
                 Console.WriteLine("2) Vis alle registreringer");
                 Console.WriteLine("0) Afslut");
@@ -43,7 +43,7 @@
                 }
                 else if (valg == "0")
                 {
-                    Console.WriteLine("Farvel");
+                    Console.WriteLine("afslut");
                     break;
                 }
                 else
@@ -66,7 +66,7 @@
             string email = Console.ReadLine();
 
             
-            if (string.IsNullOrWhiteSpace(navn) || string.IsNullOrWhiteSpace(telefon) || string.IsNullOrWhiteSpace(email))
+            if (string.IsNullOrWhiteSpace(navn) | string.IsNullOrWhiteSpace(telefon) | string.IsNullOrWhiteSpace(email))
             {
                 Console.WriteLine("Der mangler oplysninger. Udfyld venligst navn, telefon og e-mail.\n");
                 return;
@@ -99,7 +99,7 @@
             string svar = (Console.ReadLine() ?? "").Trim().ToLower();
             if (svar == "ja")
             {
-                Console.Write("Angiv rabat i %: ");
+                Console.Write(" Rabat i %: ");
                 rabatProcent = decimal.Parse(Console.ReadLine());
                 if (rabatProcent < 0)
                 {
