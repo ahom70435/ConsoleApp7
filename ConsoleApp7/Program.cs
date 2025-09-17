@@ -65,7 +65,7 @@
             Console.Write("E-mail: ");
             string email = Console.ReadLine();
 
-            // Simpel tjek
+            
             if (string.IsNullOrWhiteSpace(navn) || string.IsNullOrWhiteSpace(telefon) || string.IsNullOrWhiteSpace(email))
             {
                 Console.WriteLine("Der mangler oplysninger. Udfyld venligst navn, telefon og e-mail.\n");
@@ -89,11 +89,11 @@
                 return;
             }
 
-            // Beregn pris
+            // Beregner pris
             decimal prisPrReol = BeregnPrisPrReol(antalReoler);
             Console.WriteLine($"Pris pr. reol: {prisPrReol:0.00} kr. pr. måned");
 
-            // Spørg om rabat
+            // Spørger om rabat
             decimal rabatProcent = 0;
             Console.Write("Har lejeren specialrabat? (ja/nej): ");
             string svar = (Console.ReadLine() ?? "").Trim().ToLower();
@@ -108,10 +108,10 @@
                 }
             }
 
-            // Beregn total
+            // Beregner samlede pris
             decimal total = BeregnTotal(antalReoler, prisPrReol, rabatProcent);
 
-            // Bekræftelse – lille overblik inden vi gemmer
+            // Bekræftelse
             Console.WriteLine("\n--- Bekræftelse ---");
             Console.WriteLine($"Navn: {navn}");
             Console.WriteLine($"Telefon: {telefon}");
